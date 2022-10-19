@@ -334,7 +334,7 @@ ul {
   transform: scale(1.25);
 }
 
-.view-code:disabled,
+.view-code.disabled,
 .view-project.disabled{
   color:var(--color7-disabled);
   pointer-events: none;
