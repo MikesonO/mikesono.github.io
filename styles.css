@@ -234,7 +234,7 @@ ul {
   transition: 0.25s;
 }
 
-.button-container button:hover{
+.button-container button:hover {
   background-color: var(--color6);
 }
 
@@ -258,11 +258,11 @@ ul {
   gap: .5rem;
 }
 
-.welcome-name.bold a{
+.welcome-name.bold a {
   color: var(--color2);
 }
 
-.welcome-name.bold a:hover{
+.welcome-name.bold a:hover {
   color: var(--color6)
 }
 
@@ -313,7 +313,7 @@ ul {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
-.card p{
+.card p {
   line-height: 1.25;
 }
 
@@ -335,8 +335,8 @@ ul {
 }
 
 .view-code.disabled,
-.view-project.disabled{
-  color:var(--color7-disabled);
+.view-project.disabled {
+  color: var(--color7-disabled);
   pointer-events: none;
 }
 
@@ -348,7 +348,7 @@ ul {
 }
 
 .star-off:hover,
-.star-on:hover{
+.star-on:hover {
   color: var(--color5);
   transform: scale(1.25);
 }
@@ -374,12 +374,12 @@ ul {
   left: 3.5rem;
 }
 
-.about-me-container{
+.about-me-container {
   margin-bottom: 1rem;
 }
 
 .about-me-container,
-.announcments-container{
+.announcments-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -397,20 +397,20 @@ ul {
 }
 
 .about-me p,
-.announcements p{
+.announcements p {
   margin-top: .5rem;
   line-height: 1.5;
   font-weight: 300;
 }
 
 .about-me span,
-.announcements span{
+.announcements span {
   color: var(--color2);
 }
 
 .about-me a span:hover,
-.announcements a span:hover{
-  color:var(--color6);
+.announcements a span:hover {
+  color: var(--color6);
 }
 
 .card,
@@ -420,28 +420,31 @@ ul {
 }
 
 .facts:not(:last-child),
-.announce:not(:last-child){
+.announce:not(:last-child) {
   font-size: .95rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--color2);
 }
 
-.footer{
+.footer {
+  grid-column: span 2;
+  height: fit-content;
+  margin-top: 1rem;
+  width: 100%;
   display: flex;
-  gap: .5rem;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
-  top: 1rem;
 }
 
-.footer a{
-  color:var(--color2)
+.footer a {
+  color: var(--color2);
 }
 
-.footer p svg{
+.footer p svg {
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* ID SELECTORS */
@@ -476,6 +479,10 @@ ul {
 @media only screen and (max-width: 780px) {
   .main-content {
     grid-template-columns: 1fr;
+  }
+
+  .footer{
+    grid-column: span 1;
   }
 
 }
@@ -529,7 +536,7 @@ ul {
 @media only screen and (max-width: 500px) {
 
   .about-me-container,
-  .announcments-container{
+  .announcments-container {
     width: 350px;
   }
 
