@@ -11,9 +11,14 @@
 // Define color variables
 :root {
   --font-primary: 'Poppins', sans-serif;
+  --color-bg: #393E46;
+  --color-text: #FFFFFF;
 }
+
 
 body {
   font-family: var(--font-primary);
   line-height: 1.5;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
