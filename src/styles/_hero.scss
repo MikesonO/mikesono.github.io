@@ -1,0 +1,98 @@
+// _hero.scss
+
+.hero {
+  min-height: calc(100vh - $header-height);
+  width: 75vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+  
+  // "I'M" text
+  &__greeting {
+    font-size: 32px;
+    font-weight: $font-weight-medium;
+    color: $color-text-dark;
+    margin-bottom: 0;
+  }
+  
+  // "MIKESON" text
+  &__name {
+    font-size: 64px;
+    font-weight: $font-weight-black;
+    letter-spacing: 0.05em;
+    margin: 0;
+    color: transparent;
+    -webkit-text-stroke: 1.5px $color-primary;
+    background: url(/images/background_stripes.svg);
+    background-repeat: repeat; 
+    background-position: 0 0;
+    background-clip: text;
+    animation: backgroundMove 15s linear infinite;
+  }
+
+  @keyframes backgroundMove {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 960px 0;
+    }
+  }
+  
+  // Tagline
+  &__tagline {
+    font-size: 16px;
+    font-weight: $font-weight-normal;
+    color: white;
+    max-width: 600px;
+    margin-top: $spacing-sm;
+    letter-spacing: 0.1em;
+  }
+  
+  // Social links container
+  &__social {
+    display: flex;
+    gap: $spacing-md;
+    margin: $spacing-lg 0;
+  }
+
+  .btn {
+  width: 180px;
+  font-size: $font-size-small;
+  padding: 10px 24px;
+  justify-content: center;
+  
+  span { 
+    text-align: center;
+  }
+}
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  color: $color-primary;
+  font-size: $font-size-large;
+  transition: $transition-base;
+  
+  &:hover {
+    background-color: $color-primary;
+    color: $color-bg-dark;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 173, 181, 0.3);
+  }
+}
