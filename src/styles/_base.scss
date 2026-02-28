@@ -1,0 +1,107 @@
+// _base.scss
+
+// === CSS Reset ===
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// === Base Styles ===
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: 1.5;
+  color: $color-text-dark;
+  background-color: $color-bg-dark;
+  overflow-x: hidden;
+}
+
+// === Container ===
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+// === Typography ===
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+p {
+  font-family: $font-primary;
+}
+
+a {
+  font-family: $font-primary;
+  text-decoration: none;
+  color: inherit;
+  transition: $transition-base;
+}
+
+// === Utilities ===
+.section-title {
+  font-size: $font-size-h2;
+  margin-bottom: $spacing-xl;
+  text-align: center;
+  
+  .highlight {
+    color: $color-primary;
+  }
+}
+
+// === Buttons ===
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 32px;
+  font-weight: $font-weight-semibold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: $transition-base;
+  
+  &--primary {
+    background-color: $color-primary;
+    color: $color-bg-dark;
+    
+    &:hover {
+      background-color: $color-primary-dark;
+      transform: scale(1.04);
+    }
+  }
+  
+  &--secondary {
+    background-color: transparent;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    
+    &:hover {
+      background-color: $color-primary;
+      color: $color-bg-dark;
+    }
+  }
+}
+
+// === Lists ===
+ul {
+  list-style: none;
+}
+
+// === Images ===
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
