@@ -22,6 +22,7 @@ body {
   color: $color-text-dark;
   background-color: $color-bg-dark;
   overflow-x: hidden;
+  padding-top: $header-height; // To prevent content from being hidden behind the fixed header;
 }
 
 // === Container ===

@@ -1,0 +1,43 @@
+// _header.scss
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(34, 40, 49, 0.95);
+  color: $color-text-dark;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-height;
+  }
+
+  .logo {
+    font-family: $font-primary;
+    font-size: $font-size-h4;
+    font-weight: $font-weight-bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &__first {
+      font-size: 1.5em;
+    }
+    
+  }
+
+  .nav {
+    .nav__list {
+      display: flex;
+      gap: $spacing-md;
+    }
+  }
+
+
+
+}
