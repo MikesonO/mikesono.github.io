@@ -8,12 +8,14 @@ $color-primary: #00ADB5;
 $color-primary-dark: #008A91;
 
 // Text colors
-$color-text-dark: #FFFFFF;      // For dark mode
+$color-text-dark: #EEEEEE;      // For dark mode
 $color-text-light: #222831;     // For light mode
+$color-text-on-primary: #EEEEEE; // Text color on primary background
+$color-text-on-dark-alt: #00ADB5; // Text color on alternate dark background
 
 // Background colors
 $color-bg-dark: #393E46;        // Dark mode background
-$color-bg-light: #ffffff;       // Light mode background
+$color-bg-light: #EEEEEE;       // Light mode background
 $color-bg-dark-alt: #222831;    // Alternate dark background
 
 // === Typography ===

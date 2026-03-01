@@ -13,7 +13,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: $spacing-md;
+    gap: $spacing-sm;
   }
   
   // "I'M" text
@@ -26,7 +26,7 @@
   
   // "MIKESON" text
   &__name {
-    font-size: 64px;
+    font-size: 72px;
     font-weight: $font-weight-black;
     letter-spacing: 0.05em;
     margin: 0;
@@ -36,7 +36,7 @@
     background-repeat: repeat; 
     background-position: 0 0;
     background-clip: text;
-    animation: backgroundMove 15s linear infinite;
+    animation: backgroundMove 12s linear infinite;
   }
 
   @keyframes backgroundMove {
@@ -50,7 +50,7 @@
   
   // Tagline
   &__tagline {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: $font-weight-normal;
     color: white;
     max-width: 600px;
@@ -63,36 +63,38 @@
     display: flex;
     gap: $spacing-md;
     margin: $spacing-lg 0;
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border: 2px solid $color-primary;
+      background-color: $color-primary;
+      border-radius: 50%;
+      color: $color-bg-dark;
+      font-size: $font-size-large;
+      transition: $transition-base;
+
+      i {
+        font-size: 2rem;
+      }
+      
+      &:hover {
+        background-color: $color-primary-dark;
+        color: $color-text-on-primary;
+        border-color: $color-primary-dark;
+        transform: translateY(-2.5px);
+      }
+    }
   }
 
-  .btn {
-  width: 180px;
-  font-size: $font-size-small;
-  padding: 10px 24px;
-  justify-content: center;
-  
-  span { 
-    text-align: center;
-  }
-}
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border: 2px solid $color-primary;
-  border-radius: 50%;
-  color: $color-primary;
-  font-size: $font-size-large;
-  transition: $transition-base;
-  
-  &:hover {
-    background-color: $color-primary;
-    color: $color-bg-dark;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 173, 181, 0.3);
-  }
+  // &__button {
+  //   width: 200px;
+  //   font-size: $font-size-small;
+  //   padding: 10px 24px;
+  //   justify-content: center;
+  //   border-radius: 100px;
+  // }
 }

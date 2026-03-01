@@ -20,24 +20,33 @@
 
   .logo {
     font-family: $font-primary;
-    font-size: $font-size-h4;
+    font-size: 1.15rem;
     font-weight: $font-weight-bold;
     letter-spacing: 1px;
     text-transform: uppercase;
 
     &__first {
-      font-size: 1.5em;
+      font-size: 2rem;
     }
-    
+
   }
 
   .nav {
+
     .nav__list {
       display: flex;
       gap: $spacing-md;
+
+      .nav__link {
+
+        &:hover {
+          color: $color-text-on-dark-alt;
+        }
+
+      }
+
     }
+
   }
-
-
 
 }
