@@ -69,7 +69,8 @@ a {
   padding: 12px 32px;
   font-weight: $font-weight-semibold;
   border: none;
-  border-radius: 8px;
+  border-radius: 100px;
+  width: fit-content;
   cursor: pointer;
   transition: $transition-base;
   
@@ -79,6 +80,7 @@ a {
     
     &:hover {
       background-color: $color-primary-dark;
+      color: $color-text-dark;
       transform: scale(1.04);
     }
   }
@@ -90,7 +92,8 @@ a {
     
     &:hover {
       background-color: $color-primary;
-      color: $color-bg-dark;
+      color: $color-text-dark;
+      transform: scale(1.04);
     }
   }
 }
