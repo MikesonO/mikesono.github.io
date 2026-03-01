@@ -12,6 +12,7 @@
 // === Base Styles ===
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: $header-height;
 }
 
 body {
