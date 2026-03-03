@@ -1,0 +1,18 @@
+.about {
+  padding: $spacing-xl 0;
+  
+  .about__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    max-width: 800px; 
+    margin: 0 auto;
+    
+    p {
+      font-size: $font-size-large;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  
+}
