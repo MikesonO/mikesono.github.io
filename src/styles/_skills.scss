@@ -22,11 +22,66 @@
     flex-wrap: wrap; 
   }
   
-  .skill-item {
+    .skill-item {
+    position: relative;
+    cursor: help;
+    
     img {
-      width: 64px; 
+      width: 64px;
       height: 64px;
+      transition: all 0.4s ease;  
+    }
+    
+    // Tooltip
+    &::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -45px;  // Position below icon
+      left: 50%;
+      transform: translateX(-50%);
+      
+      // Styling
+      background-color: $color-primary-dark;
+      color: $color-text-on-primary;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: $font-size-small;
+      font-weight: $font-weight-medium;
+      white-space: nowrap;
+      
+      // Hidden by default
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    // Little arrow pointing up
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      border: 6px solid transparent;
+      border-bottom-color: $color-primary-dark;
+      
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    // Show on hover
+    &:hover {
+      &::after,
+      &::before {
+        opacity: 1;
+      }
+      
+      img {
+        transform: translateY(-2.5px);  // Slight lift effect
+        filter: brightness(0) invert(0.93); 
+      }
     }
   }
+
 }
 
