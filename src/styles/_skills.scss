@@ -1,0 +1,32 @@
+.skills {
+  padding: $spacing-md 0;
+  
+  .skills__category {
+    margin-bottom: $spacing-lg;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .skills__category-title {
+    text-align: center;
+    margin-bottom: $spacing-md;
+    font-size: $font-size-h4;
+  }
+  
+  .skills__grid {
+    display: flex;  
+    gap: $spacing-lg;
+    justify-content: center;
+    flex-wrap: wrap; 
+  }
+  
+  .skill-item {
+    img {
+      width: 64px; 
+      height: 64px;
+    }
+  }
+}
+
