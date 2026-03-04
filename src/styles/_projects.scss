@@ -1,0 +1,129 @@
+.projects {
+  padding: $spacing-xl 0;
+  
+  .projects__track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: $spacing-lg;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+  }
+  
+  .project-card {
+    background: linear-gradient(
+      135deg,
+      rgba($color-bg-dark-alt, 0.9),
+      rgba($color-bg-dark-alt, 0.7)
+    );
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba($color-primary, 0.2);
+    transition: all $transition-base;
+    
+    // Hover effect
+    &:hover {
+      transform: translateY(-8px);
+      border-color: rgba($color-primary, 0.6);
+      box-shadow: 0 12px 24px rgba($color-primary, 0.15);
+    }
+    
+    // Project image
+    &__image {
+      display: block;
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      background: $color-bg-dark;
+      position: relative;
+      cursor: pointer;  
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      
+      // Image zoom on card hover
+      &:hover img {
+        transform: scale(1.05);
+      }
+      
+      // Optional: overlay on hover
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba($color-bg-dark-alt, 0.8)
+        );
+        opacity: 0;
+        transition: opacity $transition-base;
+      }
+      
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+    
+    // Content area
+    &__content {
+      padding: $spacing-md;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+    }
+    
+    // Title
+    &__title {
+      font-size: $font-size-h4;
+      font-weight: $font-weight-bold;
+      color: $color-text-dark;
+      margin: 0;
+    }
+    
+    // Description
+    &__description {
+      color: rgba($color-text-dark, 0.8);
+      line-height: 1.6;
+      font-size: $font-size-base;
+    }
+    
+    // Tech tags
+    &__tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: $spacing-sm;
+      
+      .tech-tag {
+        padding: 4px 12px;
+        background: rgba($color-primary, 0.1);
+        color: $color-primary;
+        border: 1px solid rgba($color-primary, 0.3);
+        border-radius: 16px;
+        font-size: $font-size-small;
+        font-weight: $font-weight-medium;
+      }
+    }
+    
+    // Button links
+    &__links {
+      display: flex;
+      gap: $spacing-sm;
+      margin-top: $spacing-md;
+      
+      .btn {
+        flex: 1;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+}
