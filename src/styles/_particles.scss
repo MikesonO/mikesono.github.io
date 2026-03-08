@@ -1,5 +1,6 @@
 // _particles.scss
 
+// ===== Particles Background =====
 #particles-js {
   position: fixed;
   width: 100%;
@@ -8,4 +9,93 @@
   left: 0;
   z-index: -1;
   background-color: $color-bg-dark;
+}
+
+// ===== Particles Toggle Button =====
+.particles-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  
+  border: 2px solid rgba(34, 211, 238, 0.3);
+  background-color: transparent;
+  border-radius: 50%;
+  color: $color-primary;
+  cursor: pointer;
+  
+  transition: all 0.4s ease;
+  
+  i {
+    font-size: 1.5rem;
+    transition: all 0.4s ease;
+  }
+  
+  // Tooltip
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    
+    // Styling
+    background-color: $color-primary-dark;
+    color: $color-text-on-primary;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: $font-size-small;
+    font-weight: $font-weight-medium;
+    white-space: nowrap;
+    
+    // Hidden by default
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  // Arrow pointing down
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 50px; 
+    right: 18px;
+    
+    border: 6px solid transparent;
+    border-top-color: $color-primary-dark;
+    
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  &:hover {
+    background-color: $color-primary-dark;
+    color: $color-bg-light;  
+    border-color: $color-primary-dark;
+    transform: translateY(-2.5px) scale(1.05);
+    
+    // Show tooltip on hover
+    &::after,
+    &::before {
+      opacity: 1;
+    }
+    
+  }
+  
+  &:active {
+    transform: translateY(-1px) scale(1.02);
+  }
+
+  // When particles are disabled
+  &.particles-disabled {
+    opacity: 0.5;
+    
+    &:hover {
+      background-color: rgba($color-primary-dark, 0.7);
+    }
+  }
 }
