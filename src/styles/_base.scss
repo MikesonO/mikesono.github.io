@@ -22,7 +22,7 @@ body {
   font-weight: $font-weight-normal;
   line-height: 1.5;
   color: $color-text-dark;
-  background-color: $color-bg-dark;
+  background-color: transparent;
   overflow-x: hidden;
   padding-top: $header-height; // To prevent content from being hidden behind the fixed header;
 }
