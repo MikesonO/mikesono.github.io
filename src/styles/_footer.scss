@@ -1,0 +1,92 @@
+.footer {
+  background-color: $color-bg-dark-alt;
+  border-top: 2px solid $color-primary;
+  margin-top: $spacing-xl;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $spacing-lg $spacing-md;
+  }
+
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing-lg;
+    padding-bottom: $spacing-md;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      gap: $spacing-md;
+    }
+  }
+
+  .footer__left {
+  .footer__copyright {
+    color: $color-text-dark;  // Use your main text color
+    opacity: 0.8;              // Dim it slightly
+    font-size: 0.9rem;
+  }
+
+    .footer__tagline {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+  }
+
+  .footer__social {
+    display: flex;
+    gap: $spacing-sm;
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 2px solid rgba(34, 211, 238, 0.3);
+      background-color: transparent;
+      border-radius: 50%;
+      color: $color-primary;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-bg-light;
+        border-color: $color-primary;
+        transform: translateY(-3px) scale(1.05);      }
+    }
+  }
+
+  .footer__bottom {
+    padding-top: $spacing-md;
+    text-align: center;
+    
+    .footer__tech {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-xs;
+
+      .tech-heart {
+        color: $color-primary;
+        animation: heartbeat 1.5s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
