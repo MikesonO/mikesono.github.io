@@ -107,22 +107,13 @@ function toggleParticles() {
   const toggleButton = document.getElementById('particles-toggle');
   
   if (particlesEnabled) {
-    // Show particles and reinitialise
+    particlesContainer.style.opacity = '1';
     particlesContainer.style.visibility = 'visible';
-    document.body.style.backgroundColor = 'transparent';
     toggleButton.classList.remove('particles-disabled');
     toggleButton.dataset.tooltip = 'Disable particles background';
-    
-    // Remove existing instance and reinitialise
-    if (window.pJSDom && window.pJSDom[0]) {
-      window.pJSDom[0].pJS.fn.vendors.destroypJS();
-      window.pJSDom = [];
-    }
-    initParticles();
   } else {
-    // Hide particles and set body background
+    particlesContainer.style.opacity = '0';
     particlesContainer.style.visibility = 'hidden';
-    document.body.style.backgroundColor = '#393E46'; // $color-bg-dark
     toggleButton.classList.add('particles-disabled');
     toggleButton.dataset.tooltip = 'Enable particles background';
   }
@@ -154,11 +145,9 @@ if (typeof particlesJS === 'undefined') {
     // Set initial visibility based on enabled state
     if (particlesEnabled) {
       particlesContainer.style.visibility = 'visible';
-      document.body.style.backgroundColor = 'transparent';
       initParticles();
     } else {
       particlesContainer.style.visibility = 'hidden';
-      document.body.style.backgroundColor = '#393E46'; // $color-bg-dark
     }
   }
 }
