@@ -92,10 +92,19 @@
 
   // When particles are disabled
   &.particles-disabled {
-    opacity: 0.5;
+    
+    i {
+      opacity: 0.5;
+    }
     
     &:hover {
-      background-color: rgba($color-primary-dark, 0.7);
+      background-color: rgba($color-primary-dark, 0.6);
+      
+      &::after,
+      &::before {
+        opacity: 1;
+      }
     }
   }
+  
 }
