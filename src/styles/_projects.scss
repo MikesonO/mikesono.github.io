@@ -1,13 +1,25 @@
 .projects {
   padding: $spacing-xl 0;
-  
-  .projects__track {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: $spacing-lg;
+
+  .projects__carousel {
     max-width: $container-max-width;
     margin: 0 auto;
-    padding: 0 $container-padding;
+    padding: 10px 50px 50px;
+    position: relative;
+    overflow: hidden;
+    
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+    
+    .swiper {
+      width: 100%;
+    }
+    
+    .swiper-slide {
+      height: auto;
+      display: flex;
+    }
   }
   
   .project-card {
@@ -20,6 +32,9 @@
     overflow: hidden;
     border: 1px solid rgba($color-primary, 0.2);
     transition: all $transition-base;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     
     // Hover effect
     &:hover {
@@ -61,7 +76,7 @@
         background: linear-gradient(
           to bottom,
           transparent,
-          rgba($color-bg-dark-alt, 0.8)
+          rgba($color-bg-dark-alt, 0.75)
         );
         opacity: 0;
         transition: opacity $transition-base;
@@ -78,6 +93,7 @@
       display: flex;
       flex-direction: column;
       gap: $spacing-sm;
+      flex: 1;
     }
     
     // Title
@@ -117,7 +133,7 @@
     &__links {
       display: flex;
       gap: $spacing-sm;
-      margin-top: $spacing-md;
+      margin-top: auto;
       
       .btn {
         flex: 1;
@@ -125,6 +141,68 @@
         justify-content: center;
         text-align: center;
       }
+    }
+  }
+  
+  // Swiper Navigation Arrows
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $color-primary;
+    background: rgba($color-bg-dark-alt, 0.8);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all $transition-base;
+    
+
+    // Hide default Swiper arrow
+    svg {
+      display: none;
+    }
+    
+    i {
+      font-size: 18px;
+      transition: all $transition-base;
+    }
+    
+    &:hover {
+      background: rgba($color-primary-dark, 0.9);
+      color: $color-text-dark;
+      transform: scale(1.1);
+    }
+  }
+    
+  // Swiper Pagination
+  .swiper-pagination {
+    
+    .swiper-pagination-bullet {
+      background: rgba($color-primary, 0.3);
+      opacity: 1;
+      width: 12px;
+      height: 12px;
+      
+      &-active {
+        background: $color-primary;
+        box-shadow: 0 0 8px rgba($color-primary, 0.4);
+      }
+    }
+  }
+  
+  // Mobile adjustments
+  @media (max-width: 768px) {
+    .projects__carousel {
+      padding: 10px 60px 50px;
+    }
+    
+    .swiper-button-next {
+      right: 8px !important;
+    }
+    
+    .swiper-button-prev {
+      left: 8px !important;
     }
   }
 }
