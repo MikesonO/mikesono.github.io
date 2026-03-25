@@ -5,12 +5,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(34, 40, 49, 0.95);
+  background-color: $color-bg-header;
   color: $color-text-dark;
   backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -28,25 +28,134 @@
     &__first {
       font-size: 2rem;
     }
-
   }
 
+  // ===== Desktop Nav =====
   .nav {
-
     .nav__list {
       display: flex;
       gap: $spacing-md;
 
       .nav__link {
+        position: relative;
+        font-weight: $font-weight-medium;
 
-        &:hover {
-          color: $color-text-on-dark-alt;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: $color-primary;
+          transition: width $transition-base;
         }
 
+        &:hover,
+        &.active {
+          color: $color-primary;
+
+          &::after {
+            width: 100%;
+          }
+        }
       }
-
     }
-
   }
 
+  // ===== Hamburger Button =====
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 4px;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: $color-text-dark;
+      border-radius: 2px;
+      transition: all 0.35s ease;
+      transform-origin: center;
+    }
+
+    // Animate to × when open
+    &--open {
+      span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+        background-color: $color-primary;
+      }
+      span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  // ===== Mobile Nav =====
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+
+    .nav {
+      .nav__list {
+        position: fixed;
+        top: $header-height;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        background-color: $color-bg-header;
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba($color-primary, 0.2);
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+
+        &--open {
+          max-height: 400px;
+          padding: $spacing-sm 0;
+        }
+
+        li {
+          width: 100%;
+          text-align: center;
+        }
+
+        .nav__link {
+          display: block;
+          padding: $spacing-sm $spacing-lg;
+          font-size: $font-size-large;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          width: 100%;
+
+          &::after {
+            display: none;
+          }
+
+          &:hover,
+          &.active {
+            color: $color-primary;
+            background-color: rgba($color-primary, 0.08);
+          }
+        }
+      }
+    }
+  }
 }

@@ -65,8 +65,7 @@ function initProjectsCarousel() {
   return swiper;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  initProjectsCarousel();
-});
+initProjectsCarousel();
+
 
 export { initProjectsCarousel };
