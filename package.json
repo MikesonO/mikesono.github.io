@@ -13,6 +13,7 @@
     "vite": "^7.1.7"
   },
   "dependencies": {
-    "swiper": "^12.1.2"
+    "swiper": "^12.1.2",
+    "typed.js": "^3.0.0"
   }
 }
