@@ -57,6 +57,14 @@
     max-width: 600px;
     margin-top: $spacing-sm;
     letter-spacing: 0.1em;
+    min-height: 1.5em;
+
+    // Typed.js cursor
+    .typed-cursor {
+      display: inline;
+      color: $color-primary;
+      font-weight: $font-weight-normal;
+    }
   }
   
   // Social links container
@@ -97,4 +105,22 @@
   //   justify-content: center;
   //   border-radius: 100px;
   // }
+
+  @media (max-width: 768px) {
+    & {
+      width: 90vw;
+    }
+
+    &__name {
+      font-size: 48px;
+    }
+    
+    &__tagline {
+      font-size: 16px;
+    }
+    
+    &__social {
+      margin: $spacing-md 0;
+    }
+  }
 }
