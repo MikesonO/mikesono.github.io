@@ -1,11 +1,11 @@
 // Import all partials
-@import 'variables';
-@import 'base';
-@import 'header';
-@import 'hero';
-@import 'about';
-@import 'skills';
-@import 'projects';
-@import 'contact';
-@import 'footer';
-@import 'particles';
+@use 'variables';
+@use 'base';
+@use 'header';
+@use 'hero';
+@use 'about';
+@use 'skills';
+@use 'projects';
+@use 'contact';
+@use 'footer';
+@use 'particles';
