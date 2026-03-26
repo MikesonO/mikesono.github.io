@@ -1,3 +1,6 @@
+// _footer.scss
+@use 'variables' as *;
+
 .footer {
   background-color: $color-bg-dark-alt;
   border-top: 2px solid $color-primary;

@@ -1,4 +1,5 @@
 // _hero.scss
+@use 'variables' as *;
 
 .hero {
   min-height: calc(100vh - $header-height);
