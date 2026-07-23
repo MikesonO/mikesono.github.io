@@ -86,5 +86,25 @@
     }
   }
 
-}
+  @media (max-width: 768px) {
+    padding: $spacing-sm 0;
 
+    .skills__category {
+      margin-bottom: $spacing-lg;
+    }
+
+    .skills__category-title {
+      font-size: $font-size-large;
+      margin-bottom: $spacing-md;
+    }
+
+    .skills__grid {
+      gap: $spacing-md $spacing-lg;
+    }
+
+    .skill-item img {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}
