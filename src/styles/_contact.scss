@@ -83,6 +83,19 @@
     }
   }
   
+  @media (max-width: 768px) {
+    padding: $spacing-md 0;
+
+    .contact-form {
+      padding: $spacing-md;
+      gap: $spacing-sm;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+  }
+
   // Submit button
   .form-submit {
     margin: $spacing-sm auto 0;
