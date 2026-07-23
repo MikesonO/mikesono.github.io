@@ -11,10 +11,19 @@
   position: relative;
   
   .container {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-xxl;
+}
+
+  &__content {
     display: flex;
     flex-direction: column;
     gap: $spacing-sm;
+    flex: 1;
   }
   
   // "I'M" text
@@ -66,7 +75,47 @@
       font-weight: $font-weight-normal;
     }
   }
-  
+
+  // Profile Image
+  &__image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    .hero__image {
+      background: url('/images/profile.jpg');
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      height: 450px;
+      width: 450px;
+      animation: blobMorph 7s ease-in-out infinite, float 4s ease-in-out infinite;
+    }
+
+    @keyframes blobMorph {
+      0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+      }
+      50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+      100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-16px); }
+    }
+
+  }
+
+
   // Social links container
   &__social {
     display: flex;
@@ -138,18 +187,40 @@
   @media (max-width: 768px) {
     & {
       width: 90vw;
+      align-items: flex-start;
+      padding-top: $spacing-xl;
+    }
+
+    .container {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      gap: $spacing-md;
+    }
+
+    &__content {
+      align-items: center;
+    }
+
+    &__tagline {
+      font-size: 16px;
+      text-align: center;
     }
 
     &__name {
       font-size: 48px;
     }
-    
-    &__tagline {
-      font-size: 16px;
-    }
-    
+
     &__social {
       margin: $spacing-md 0;
+      justify-content: center;
+    }
+
+    &__image-wrapper {
+      .hero__image {
+        height: 200px;
+        width: 200px;
+      }
     }
   }
 }
