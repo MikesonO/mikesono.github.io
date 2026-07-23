@@ -17,5 +17,15 @@
       color: rgba(255, 255, 255, 0.9);
     }
   }
-  
+
+  @media (max-width: 768px) {
+    padding: $spacing-sm 0;
+
+    .about__content {
+      p {
+        font-size: $font-size-base;
+        line-height: 1.7;
+      }
+    }
+  }
 }

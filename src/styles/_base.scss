@@ -71,6 +71,13 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .section-title {
+    font-size: $font-size-h3;
+    margin-bottom: $spacing-lg;
+  }
+}
+
 // === Buttons ===
 .btn {
   display: inline-flex;
