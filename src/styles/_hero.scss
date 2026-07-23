@@ -62,7 +62,7 @@
     // Typed.js cursor
     .typed-cursor {
       display: inline;
-      color: $color-primary;
+      color: $color-text-dark;
       font-weight: $font-weight-normal;
     }
   }
@@ -97,6 +97,35 @@
       }
     }
   }
+
+  // Scroll indicator
+&__scroll-indicator {
+  position: absolute;
+  bottom: $spacing-lg;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $color-primary;
+  opacity: 0.7;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+
+  i {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
+}
 
   // &__button {
   //   width: 200px;

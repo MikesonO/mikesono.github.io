@@ -66,6 +66,14 @@ function initNav() {
     }, { passive: true });
 }
 
+// Scroll indicator
+const scrollIndicator = document.querySelector('.hero__scroll-indicator');
+if (scrollIndicator) {
+  scrollIndicator.addEventListener('click', () => {
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
 initNav();
 
 export { initNav };
