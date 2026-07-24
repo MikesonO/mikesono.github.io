@@ -237,6 +237,11 @@
       width: 90vw;
       align-items: flex-start;
       padding-top: $spacing-xl;
+      padding-bottom: 80px;
+    }
+
+    &__scroll-indicator {
+      bottom: 90px;
     }
 
     .container {
