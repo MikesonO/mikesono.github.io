@@ -7,3 +7,4 @@ import './modules/particles.js';
 import './modules/carousel.js';
 import './modules/nav.js';
 import './modules/typed.js';
+import './modules/contact.js';
