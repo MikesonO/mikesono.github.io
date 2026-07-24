@@ -37,6 +37,7 @@ form.addEventListener('submit', (e) => {
     setTimeout(() => {
       submitBtn.textContent = 'Send Message';
       submitBtn.style.backgroundColor = '';
+      submitBtn.style.opacity = '';
     }, 4000);
   });
 });
