@@ -65,7 +65,7 @@
     color: white;
     max-width: 600px;
     margin-top: $spacing-sm;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05rem;
     min-height: 1.5em;
 
     // Typed.js cursor
@@ -241,7 +241,7 @@
     }
 
     &__scroll-indicator {
-      bottom: 50px;
+      bottom: 30px;
     }
 
     .container {
@@ -266,6 +266,7 @@
     &__tagline {
       font-size: 16px;
       text-align: center;
+      min-height: 2rem;
     }
 
     &__name {
