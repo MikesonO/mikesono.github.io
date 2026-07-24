@@ -6,8 +6,9 @@ function initTyped() {
 
   new Typed(el, {
     strings: [
-      'I HELP COMPANIES MAKE BEAUTIFUL WEBSITES',
-      'I BUILD FAST &amp; RESPONSIVE UIs',
+      'I BUILD FAST & RESPONSIVE UIs',
+      'I IMPLEMENT TRACKING & ANALYTICS',
+      'I INTEGRATE APIs & BACKEND SERVICES',
       'I TURN IDEAS INTO WEB EXPERIENCES',
     ],
     typeSpeed: 50,
