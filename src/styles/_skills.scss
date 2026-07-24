@@ -51,6 +51,7 @@
       font-size: $font-size-small;
       font-weight: $font-weight-medium;
       white-space: nowrap;
+      z-index: 1;
       
       // Hidden by default
       opacity: 0;
