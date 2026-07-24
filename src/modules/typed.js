@@ -15,6 +15,8 @@ function initTyped() {
     backSpeed: 30,
     backDelay: 2000,
     loop: true,
+    smartBackspace: false,
+    contentType: 'null',
     cursorChar: '|',
   });
 }
