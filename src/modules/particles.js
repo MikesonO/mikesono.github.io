@@ -111,11 +111,13 @@ function toggleParticles() {
     particlesContainer.style.visibility = 'visible';
     toggleButton.classList.remove('particles-disabled');
     toggleButton.dataset.tooltip = 'Disable particles background';
+    toggleButton.setAttribute('aria-label', 'Disable particles background');
   } else {
     particlesContainer.style.opacity = '0';
     particlesContainer.style.visibility = 'hidden';
     toggleButton.classList.add('particles-disabled');
     toggleButton.dataset.tooltip = 'Enable particles background';
+    toggleButton.setAttribute('aria-label', 'Enable particles background');
   }
 }
 
